@@ -8,15 +8,15 @@ const User = require("../Models/userModel");
 // @route POST /api/games/create
 // @access private
 const createGame = expressAsyncHandler(async (req, res) => {
-    const {user, name, events} = req.body;
+    const {name, events} = req.body;
 
-    if(!name && !events && !user){
+    if(!name && !events){
         res.status(400);
         throw new Error("Please Add All Fields.");
     }
 
     const game = await Game.create({
-        user,
+        user : req.user.id,
         name,
         events
     })
