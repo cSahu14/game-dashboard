@@ -16,6 +16,8 @@ app.use(express.urlencoded({urlencoded : false}))
 app.use("/api/users", require("./routes/userRoute"))
 app.use("/api/games", require("./routes/gameRoute"))
 app.use("/api/player", require("./routes/playerRoute"))
+app.use("/api/team", require("./routes/teamRoute"))
+app.use("/api/match", require("./routes/matchRoute"))
 
 app.use(errorHanler)
 

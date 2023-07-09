@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const { getMe } = require("../controllers/userController")
 const {protect} = require("../middlewares/authMiddleware");
 const { createGame, getGame, updateGame, deleteGame } = require("../controllers/gameController");
 

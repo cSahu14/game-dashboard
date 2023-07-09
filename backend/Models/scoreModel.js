@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const matchSchema = mongoose.Schema({
+const scoreSchema = mongoose.Schema({
     user : {
         type : mongoose.Schema.Types.ObjectId,
         required : true,
@@ -16,4 +16,4 @@ const matchSchema = mongoose.Schema({
     timestamps : true
 })
 
-module.exports = mongoose.model("Match", matchSchema)
+module.exports = mongoose.model("Score", scoreSchema)
